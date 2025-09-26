@@ -1,4 +1,3 @@
-<script>
 function buyProduct(productTitle, productPrice, productBalance, productDescription) {
     // Store product details in sessionStorage for the payment page
     sessionStorage.setItem('selectedProduct', JSON.stringify({
@@ -11,4 +10,3 @@ function buyProduct(productTitle, productPrice, productBalance, productDescripti
     // Redirect to payment/topup page
     window.location.href = '../../show_order.html';
 }
-</script>
