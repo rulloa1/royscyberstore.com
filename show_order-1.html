@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logshop Payment Page</title>
+    <link href="npm\tailwindcss%402.2.19\dist\tailwind.min-1.css" rel="stylesheet">
+    
+    
+    <style>
+        /* Color palette based on previous design */
+        :root {
+            --bg-dark: #021024;
+            --bg-card: #052659;
+            --accent-light: #C1E8FF;
+            --primary-accent: #C54B6D;
+            --secondary-accent: #ffffff;
+            --highlight-yellow: #F7C948;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            font-family: 'Poppins', sans-serif;
+            color: var(--secondary-accent);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--highlight-yellow);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: var(--secondary-accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #9C3B56;
+        }
+
+        .copy-input {
+            background-color: var(--highlight-yellow);
+            color: #000;
+            font-weight: bold;
+        }
+
+        .countdown-timer {
+            color: var(--highlight-yellow);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <div class="container relative z-10 text-center py-12">
+        <!-- Header -->
+        <h1 class="title mb-6">MAKE YOUR PAYMENT</h1>
+        
+        <!-- Payment Card -->
+        <div class="card mb-8">
+            <h2 class="text-xl text-red-500 mb-4">Minimum Deposit: $100.00</h2>
+            <a href="https://t.me/Dark_Web_Admin" class="btn-primary mb-4 inline-block">Contact Us on Telegram</a>
+
+            <h3 class="text-2xl font-bold text-highlight-yellow mt-6">Deposit Bitcoin (BTC)</h3>
+            <p class="text-lg mb-4">Copy BTC Address or scan QR to send your payment.</p>
+            
+            <!-- QR Code and BTC Address -->
+            <div class="flex flex-col items-center my-6">
+                <img class="w-48 h-48 rounded-lg mb-4" src="product\1751193094-1.jpg" alt="QR code for payment">
+                <input type="text" class="w-full copy-input p-2 rounded mb-4 text-center" value="3PbXJHAGiA9i7bY97B4Kq8XUr52ozibrC8" id="btcAddress" readonly="">
+                <button class="btn-primary" onclick="copyBTCAddress()">COPY BTC ADDRESS</button>
+            </div>
+            
+            
+            <p class="text-sm">Status: <span class="bg-blue-500 text-white py-1 px-2 rounded">Awaiting Payment</span></p>
+        </div>
+
+        <!-- Payment Confirmation -->
+        <div class="card mb-8">
+            <p class="text-lg mb-4">Your balance will be credited immediately after 2 blockchain confirmations.</p>
+            <div id="countdown" class="countdown-timer">05:00 Minutes!</div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Particle Background -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 160, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } },
+                "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 4, "size_min": 0.3, "sync": false } },
+                "line_linked": { "enable": false },
+                "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+    <!-- JavaScript for Clipboard Copy -->
+    <script>
+        function copyBTCAddress() {
+            var copyText = document.getElementById("btcAddress");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            Swal.fire({
+                icon: 'success',
+                title: 'Copied!',
+                text: 'BTC Address copied to clipboard!'
+            });
+        }
+    </script>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        function startCountdown(duration) {
+            let timer = duration, minutes, seconds;
+            const countdownElement = document.getElementById('countdown');
+
+            function updateCountdown() {
+                minutes = Math.floor(timer / 60);
+                seconds = timer % 60;
+
+                // Format time with leading zeros
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                countdownElement.textContent = `${minutes}:${seconds} Minutes!`;
+
+                if (--timer < 0) {
+                    countdownElement.textContent = 'Time is up!';
+                    clearInterval(interval); // Stop the countdown when time is up
+                }
+            }
+
+            // Update the countdown every second
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to display the timer immediately
+        }
+
+        // Start the countdown for 5 minutes (300 seconds)
+        startCountdown(300);
+    </script>
+
+    
+</body>
+
+</html>
+
+
