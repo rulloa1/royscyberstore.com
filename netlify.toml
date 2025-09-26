@@ -1,0 +1,59 @@
+[build]
+  # Since this is a static HTML site, no build command is needed
+  command = ""
+  
+  # Publish directory - the current directory contains the HTML files
+  publish = "."
+
+[build.environment]
+  # Set NODE_VERSION if needed for any build processes
+  NODE_VERSION = "18"
+
+# Handle HTML files without extensions
+[[redirects]]
+  from = "/index"
+  to = "/index-2.htm"
+  status = 200
+
+# Redirect root to main index file
+[[redirects]]
+  from = "/"
+  to = "/index-2.htm"
+  status = 200
+
+# Handle page not found
+[[redirects]]
+  from = "/*"
+  to = "/index-2.htm"
+  status = 404
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: blob:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https: blob:; font-src 'self' https: data:; connect-src 'self' https: wss: ws:; frame-src 'self' https:;"
+
+# Cache static assets
+[[headers]]
+  for = "/npm/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/originals/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/product/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/s/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
