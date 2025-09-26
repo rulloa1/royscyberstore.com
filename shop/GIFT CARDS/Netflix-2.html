@@ -318,11 +318,11 @@
                         </li>
         
         <li>
-        <a href="http://www.logshop.cc/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <a href="https://royscyberstore.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
     Logout
 </a>
 
-<form id="logout-form" action="http://www.logshop.cc/logout" method="POST" class="hidden">
+<form id="logout-form" action="https://royscyberstore.com/logout" method="POST" class="hidden">
     <input type="hidden" name="_token" value="kPg4RRepPj9iUEQRHFWJqTrQm1JUHI1WVOSNKUKR"></form>
 
 
@@ -335,7 +335,7 @@
 <!-- end: Sidebar -->
 
 
-<div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+<div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-[60] header-nav">
     <button type="button" class="text-lg text-gray-600 sidebar-toggle">
         <i class="ri-menu-line"></i>
     </button>
@@ -344,7 +344,7 @@
 
 
     </ul>
-    <ul class="ml-auto flex items-center">
+    <ul class="ml-auto flex items-center space-x-3">
         <li class="">
       <!-- Add Balance Button -->
 <a href="../../show_order-2.html" class="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-red-700">
@@ -457,13 +457,7 @@
                                                     <li><strong>Price:</strong> $00</li>
                           <li><strong>Description:</strong> Oh! It seems this product is restricted to import in your country ? Contact Admin....</li>
                         </ul>
-                                                  <form action="http://www.logshop.cc/add_cart/185" method="post">
-                            <input type="hidden" name="_token" value="kPg4RRepPj9iUEQRHFWJqTrQm1JUHI1WVOSNKUKR">                            <input type="hidden" value="Netflix e-Giftcards" name="title">
-                            <input type="hidden" value="Oh! It seems this product is restricted to import in your country ? Contact Admin...." name="description">
-                            <input type="hidden" value="00" name="balance">
-                            <input type="hidden" value="00" name="price">
-                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
-                          </form>
+                                                  <button type="button" onclick="buyProduct(`Netflix e-Giftcards`, `00`, `00`, `Oh! It seems this product is restricted to import in your country ? Contact Admin....`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
                                               </div>
                     </div>
                   
@@ -578,6 +572,56 @@
 
 
 
+
+
+<!-- Additional CSS to ensure header visibility -->
+<style>
+/* Ensure the top header bar is always visible */
+.header-nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    background: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Ensure buttons in header are visible */
+.header-nav ul li a,
+.header-nav ul li button {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+}
+
+/* Make sure all button text is visible with maximum contrast */
+.header-nav ul.ml-auto li * {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline !important;
+}
+
+/* Ensure button backgrounds are proper */
+.header-nav a[href*="show_order"] {
+    background-color: #dc2626 !important;
+}
+.header-nav a[href*="orders"] {
+    background-color: #2563eb !important;
+}
+.header-nav button {
+    background-color: #16a34a !important;
+}
+</style>
 </body>
 </html><!-- SweetAlert2 JS -->
+
+
+
+
 

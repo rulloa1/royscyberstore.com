@@ -15,5 +15,5 @@ Total files removed: 6,912
 Total space freed: 45.86 MB
 
 Artifacts:
-- Analysis report: C:\xampp\htdocs\www.logshop.cc\duplicate_files_report.txt
-- Removal list (pre-action): C:\xampp\htdocs\www.logshop.cc\files_to_remove.txt
+- Analysis report: C:\xampp\htdocs\www.logshop.store\duplicate_files_report.txt
+- Removal list (pre-action): C:\xampp\htdocs\www.logshop.store\files_to_remove.txt

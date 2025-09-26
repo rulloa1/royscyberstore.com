@@ -12,19 +12,19 @@
 # Handle HTML files without extensions
 [[redirects]]
   from = "/index"
-  to = "/index-2.htm"
+  to = "/index.html"
   status = 200
 
 # Redirect root to main index file
 [[redirects]]
   from = "/"
-  to = "/index-2.htm"
+  to = "/index.html"
   status = 200
 
 # Handle page not found
 [[redirects]]
   from = "/*"
-  to = "/index-2.htm"
+  to = "/index.html"
   status = 404
 
 # Security headers

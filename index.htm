@@ -1,8 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Redirect to new domain -->
+    <meta http-equiv="refresh" content="0; url=https://royscyberstore.com">
+    <script>
+        // JavaScript redirect as backup
+        window.location.href = "https://royscyberstore.com";
+    </script>
     <script src="3.4.17"></script>
     <link href="npm/remixicon%403.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="home/css/main.css">
@@ -318,11 +324,11 @@
                         </li>
         
         <li>
-        <a href="http://www.logshop.cc/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <a href="https://royscyberstore.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
     Logout
 </a>
 
-<form id="logout-form" action="http://www.logshop.cc/logout" method="POST" class="hidden">
+<form id="logout-form" action="https://royscyberstore.com/logout" method="POST" class="hidden">
     <input type="hidden" name="_token" value="fKVfY6PfhlsncEUEcyB03Y3F5LJ7RLILR4osScfO"></form>
 
 
@@ -335,7 +341,7 @@
 <!-- end: Sidebar -->
 
 
-<div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+<div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-[60] header-nav">
     <button type="button" class="text-lg text-gray-600 sidebar-toggle">
         <i class="ri-menu-line"></i>
     </button>
@@ -344,7 +350,7 @@
 
 
     </ul>
-    <ul class="ml-auto flex items-center">
+    <ul class="ml-auto flex items-center space-x-3">
         <li class="">
       <!-- Add Balance Button -->
 <a href="show_order.html" class="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-red-700">
@@ -390,7 +396,7 @@
                 leaving no room for compromise.
             </p>
             <p class="text-lg text-white leading-relaxed shadow-text">
-            Have unlimited experience shopping with us at https://Logshop.cc
+            Have unlimited experience shopping with us at https://royscyberstore.com
             </p>
 
             <h2 class="text-4xl font-extrabold text-white mb-6 text-center animate-bounce-text-glow underline decoration-blue-600">
@@ -426,8 +432,8 @@
 
     <div class="important-links bg-blue-600 p-4 rounded-lg shadow-md space-y-4">
 
-        <a href="https://t.me/Dark_Web_Admin" target="_blank" class="link-item text-white">Join Our Private Channel</a>
-        <a href="https://t.me/Dark_Web_Admin" target="_blank" class="link-item text-white">Contact Admin</a>
+        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="link-item text-white">Join Our Private Channel</a>
+        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="link-item text-white">Contact Admin</a>
     </div>
 
 </div>
@@ -841,5 +847,56 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+
+<!-- Additional CSS to ensure header visibility -->
+<style>
+/* Ensure the top header bar is always visible */
+.header-nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    background: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Ensure buttons in header are visible */
+.header-nav ul li a,
+.header-nav ul li button {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+}
+
+/* Make sure all button text is visible with maximum contrast */
+.header-nav ul.ml-auto li * {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline !important;
+}
+
+/* Ensure button backgrounds are proper */
+.header-nav a[href*="show_order"] {
+    background-color: #dc2626 !important;
+}
+.header-nav a[href*="orders"] {
+    background-color: #2563eb !important;
+}
+.header-nav button {
+    background-color: #16a34a !important;
+}
+</style>
 </body>
 </html><!-- SweetAlert2 JS -->
+
+
+
+
+
