@@ -288,6 +288,26 @@ body::after {
         border-radius: 16px !important;
     }
     
+    .card:hover {
+        transform: translateY(-8px) scale(1.01) !important;
+    }
+    
+    .header-nav a,
+    .header-nav button {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .modern-welcome-card,
+    .modern-links-section {
+        padding: 1.5rem !important;
+        border-radius: 20px !important;
+    }
+    
+    .modern-glow-text {
+        font-size: 1.8rem !important;
+    }
+    
     body::before,
     body::after {
         display: none;
