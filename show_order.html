@@ -9,62 +9,181 @@
     
     
     <style>
-        /* Color palette based on previous design */
+        /* Modern RoysCyberStore Payment Theme */
         :root {
-            --bg-dark: #021024;
-            --bg-card: #052659;
-            --accent-light: #C1E8FF;
-            --primary-accent: #C54B6D;
-            --secondary-accent: #ffffff;
-            --highlight-yellow: #F7C948;
+            --primary-red: #DC2625;
+            --secondary-red: #EF4444;
+            --accent-red: #FCA5A5;
+            --primary-black: #0F0F0F;
+            --secondary-black: #1A1A1A;
+            --tertiary-black: #262626;
+            --primary-white: #FFFFFF;
+            --secondary-white: #F8FAFC;
+            --tertiary-white: #E2E8F0;
+            --red-gradient: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
+            --dark-gradient: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+            --geometric-shadow: 0 20px 25px -5px rgba(220, 38, 37, 0.1), 0 10px 10px -5px rgba(220, 38, 37, 0.04);
         }
 
         body {
-            background-color: var(--bg-dark);
-            font-family: 'Poppins', sans-serif;
-            color: var(--secondary-accent);
+            background: var(--primary-black) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            color: var(--primary-white) !important;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Geometric Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -20%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(220, 38, 37, 0.03) 0%, transparent 70%);
+            z-index: -2;
+            pointer-events: none;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: auto;
+            position: relative;
+            z-index: 10;
         }
 
         .card {
-            background-color: var(--bg-card);
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background: var(--secondary-black) !important;
+            border: 1px solid rgba(220, 38, 37, 0.1);
+            border-radius: 20px !important;
+            padding: 2.5rem !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), var(--geometric-shadow);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
         }
 
         .title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--highlight-yellow);
+            font-size: 2.5rem !important;
+            font-weight: 800 !important;
+            color: var(--primary-white) !important;
+            text-align: center;
+            margin-bottom: 2rem !important;
+            position: relative;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--red-gradient);
+            border-radius: 2px;
         }
 
         .btn-primary {
-            background-color: var(--primary-accent);
-            color: var(--secondary-accent);
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
+            background: var(--red-gradient) !important;
+            color: var(--primary-white) !important;
+            padding: 1rem 2rem !important;
+            border-radius: 15px !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+            border: none !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            box-shadow: var(--geometric-shadow) !important;
+            text-decoration: none !important;
+            display: inline-block;
         }
 
         .btn-primary:hover {
-            background-color: #9C3B56;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 20px 40px rgba(220, 38, 37, 0.4) !important;
         }
 
         .copy-input {
-            background-color: var(--highlight-yellow);
-            color: #000;
-            font-weight: bold;
+            background: var(--tertiary-black) !important;
+            color: var(--primary-white) !important;
+            border: 1px solid rgba(220, 38, 37, 0.2) !important;
+            border-radius: 12px !important;
+            font-weight: 600 !important;
+            padding: 1rem !important;
+        }
+
+        .copy-input:focus {
+            border-color: var(--primary-red) !important;
+            outline: none !important;
+            box-shadow: var(--geometric-shadow) !important;
         }
 
         .countdown-timer {
-            color: var(--highlight-yellow);
-            font-size: 1.5rem;
+            color: var(--primary-red) !important;
+            font-size: 1.8rem !important;
+            font-weight: 800 !important;
+            text-align: center;
+        }
+
+        /* QR Code Container */
+        .qr-container {
+            background: var(--primary-white);
+            padding: 1rem;
+            border-radius: 16px;
+            display: inline-block;
+            box-shadow: var(--geometric-shadow);
+        }
+
+        /* Product Info Styling */
+        #productInfo {
+            border: 1px solid rgba(220, 38, 37, 0.2) !important;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%) !important;
+            color: var(--primary-white) !important;
+            padding: 0.5rem 1.5rem !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            display: inline-block;
+        }
+
+        /* Continue Shopping Button */
+        .continue-shopping {
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
+            color: var(--primary-white) !important;
+            padding: 0.75rem 2rem !important;
+            border-radius: 12px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            text-decoration: none !important;
+        }
+
+        .continue-shopping:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .card {
+                padding: 1.5rem !important;
+                border-radius: 16px !important;
+            }
+            
+            .title {
+                font-size: 2rem !important;
+            }
         }
     </style>
 </head>
@@ -94,17 +213,19 @@
             
             <!-- QR Code and BTC Address -->
             <div class="flex flex-col items-center my-6">
-                <img class="w-48 h-48 rounded-lg mb-4" src="product/1751193094.jpg" alt="QR code for payment">
+                <div class="qr-container mb-4">
+                    <img class="w-48 h-48 rounded-lg" src="product/1751193094.jpg" alt="QR code for payment">
+                </div>
                 <input type="text" class="w-full copy-input p-2 rounded mb-4 text-center" value="3PbXJHAGiA9i7bY97B4Kq8XUr52ozibrC8" id="btcAddress" readonly="">
                 <button class="btn-primary" onclick="copyBTCAddress()">COPY BTC ADDRESS</button>
             </div>
             
             
-            <p class="text-sm">Status: <span class="bg-blue-500 text-white py-1 px-2 rounded">Awaiting Payment</span></p>
+            <p class="text-sm">Status: <span class="status-badge">Awaiting Payment</span></p>
             
             <!-- Continue Shopping Button -->
             <div class="mt-6">
-                <a href="../../index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all duration-300">
+                <a href="../../index.html" class="continue-shopping">
                     ← Continue Shopping
                 </a>
             </div>
