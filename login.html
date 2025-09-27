@@ -77,22 +77,30 @@
             background-color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Submit button */
+        /* Submit button - Modern Theme */
         input[type="submit"] {
-            background: #ff6b6b;
+            background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
             color: #fff;
             padding: 15px;
             border: none;
             width: 100%;
             cursor: pointer;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 20px 25px -5px rgba(220, 38, 37, 0.1), 0 10px 10px -5px rgba(220, 38, 37, 0.04);
+            position: relative;
+            overflow: hidden;
         }
 
         input[type="submit"]:hover {
-            transform: scale(1.05);
-            background-color: #ff4c4c;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 25px 35px -5px rgba(220, 38, 37, 0.3);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(-1px) scale(0.98);
         }
 
         /* Additional text and link styling */
@@ -132,7 +140,7 @@
         <div class="logo-container">
             <!-- Logo placeholder -->
         </div>
-        <h2 style="text-align: center; color: #fff;">LOGSHOP</h2>
+        <h2 style="text-align: center; color: #fff;">RoysCyberStore</h2>
 
         <!-- Display Validation Errors -->
         

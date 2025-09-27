@@ -322,6 +322,30 @@ body::after {
     animation: pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Logout Button Modern Styling */
+.sidebar-menu a[href*="logout"] {
+    background: var(--red-gradient) !important;
+    color: var(--primary-white) !important;
+    margin: 8px 8px 16px 8px !important;
+    border-radius: 15px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    box-shadow: var(--geometric-shadow) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-menu a[href*="logout"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 25px 35px -5px rgba(220, 38, 37, 0.4) !important;
+}
+
+.sidebar-menu a[href*="logout"]:hover::before {
+    left: 0;
+    opacity: 0.2;
+}
+
 /* Geometric Decorative Elements */
 .geometric-accent::before {
     content: '';

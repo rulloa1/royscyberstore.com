@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | LOGSHOP</title>
+    <title>Register | RoysCyberStore</title>
     <!-- Base URL for assets -->
     <!-- Removed by WebCopy --><!--<base href="/public">--><!-- Removed by WebCopy -->
 
@@ -115,24 +115,30 @@
             }
         }
 
-        /* Submit button */
+        /* Submit button - Modern Theme */
         input[type="submit"] {
-            background: #3498db;
+            background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
             color: #fff;
             padding: 15px;
             border: none;
             width: 100%;
             cursor: pointer;
-            border-radius: 8px;
-            font-weight: bold;
-            animation: pulsate 1.5s infinite;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.5);
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 20px 25px -5px rgba(220, 38, 37, 0.1), 0 10px 10px -5px rgba(220, 38, 37, 0.04);
+            position: relative;
+            overflow: hidden;
         }
 
         input[type="submit"]:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.8);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 25px 35px -5px rgba(220, 38, 37, 0.3);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(-1px) scale(0.98);
         }
 
         /* Additional text and link styling */
@@ -175,7 +181,7 @@
         <div class="logo-container">
             <!-- Placeholder for logo -->
         </div>
-        <h3>LOGSHOP REGISTRATION PAGE</h3>
+        <h3>RoysCyberStore REGISTRATION PAGE</h3>
         <div class="form-info">
             <!-- Laravel session status and validation errors -->
             
