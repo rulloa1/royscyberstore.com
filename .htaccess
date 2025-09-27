@@ -1,13 +1,9 @@
-# Redirect all requests from logshop.cc to royscyberstore.com
+# RoysCyberStore - Main website configuration
 RewriteEngine On
 
-# Redirect all HTTP requests to royscyberstore.com
-RewriteCond %{HTTP_HOST} ^logshop\.cc$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.logshop\.cc$
-RewriteRule ^(.*)$ https://royscyberstore.com/$1 [R=301,L]
-
-# Alternative: If you want to redirect only the main domain and keep subdirectories
-# RewriteCond %{HTTP_HOST} ^(www\.)?logshop\.cc$
+# Redirect old domain references to royscyberstore.com (if needed)
+# RewriteCond %{HTTP_HOST} ^old-domain\.com$ [OR]
+# RewriteCond %{HTTP_HOST} ^www\.old-domain\.com$
 # RewriteRule ^(.*)$ https://royscyberstore.com/$1 [R=301,L]
 
 # Security headers (optional)
