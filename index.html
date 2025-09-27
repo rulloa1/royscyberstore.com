@@ -371,46 +371,46 @@
 
 
 
-<div class="container mx-auto py-12 px-6 border-4 border-gray-800 bg-gray-900 rounded-lg overflow-hidden">
+<div class="container mx-auto py-12 px-6 border-4 border-red-600 bg-black rounded-3xl overflow-hidden modern-container">
     <!-- Grid layout for two columns -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
 
         <!-- Column 1: Welcome Section -->
-        <div class="bg-blue-600 p-8 rounded-lg border-2 border-blue-800 shadow-lg transform hover:scale-105 transition-transform duration-700 animate-fade-in h-full overflow-auto">
-            <h2 class="text-4xl font-extrabold text-white mb-6 text-center animate-bounce-text-glow -yellow-400">
-                Welcome to The Best store</h2>
-            <p class="text-lg text-white leading-relaxed mb-4 shadow-text">
-                Discover <span class="text-yellow-300 underline decoration-2">RoysCyberStore</span>, where your monetary
+        <div class="modern-welcome-card p-8 rounded-3xl border-2 border-red-600 shadow-lg transform hover:scale-105 transition-all duration-700 animate-fade-in h-full overflow-auto">
+            <h2 class="text-4xl font-extrabold text-white mb-6 text-center modern-glow-text">
+                Welcome to RoysCyberStore</h2>
+            <p class="text-lg text-gray-200 leading-relaxed mb-4 shadow-text">
+                Discover <span class="text-red-400 underline decoration-2 font-bold">RoysCyberStore</span>, where your monetary
                 equilibrium meets identity. At RoysCyberStore, we craft a legacy of trust,
                 unparalleled security where legitimacy reigns supreme. We ensure daily, exhaustive counterchecks of our
                 products to affirm authenticity,
                 leaving no room for compromise.
             </p>
-            <p class="text-lg text-white leading-relaxed shadow-text">
+            <p class="text-lg text-gray-200 leading-relaxed shadow-text mb-6">
             Have unlimited experience shopping with us at https://royscyberstore.com
             </p>
 
-            <h2 class="text-4xl font-extrabold text-white mb-6 text-center animate-bounce-text-glow underline decoration-blue-600">
+            <h2 class="text-3xl font-extrabold text-white mb-6 text-center modern-glow-text">
                 Privacy Policy & Rules</h2>
-            <p class="text-lg text-white leading-relaxed mb-4 shadow-text">
+            <p class="text-lg text-gray-200 leading-relaxed mb-4 shadow-text">
             Our Privacy policy governs your use of our Service and explains how we collect, safeguard, and disclose information that results from your use of our web pages. Your agreement with us includes these Terms and our Privacy Policy. You acknowledge that you have read and understood Agreements, and agree to be bound by them. These Terms apply to all visitors, users, and others who wish to access or use the Service.
             </p>
-            <p class="text-lg text-white leading-relaxed shadow-text">
+            <p class="text-lg text-gray-200 leading-relaxed shadow-text">
                 For any support, contact us via the Green message icon on the bottom right. Orders not cleared in 7 days
                 will auto-cancel. Deposits above $500 get a 25% bonus!
             </p>
         </div>
 
-<!-- Column 2: Privacy Policy and Rules Section -->
-<div class="important-links-section bg-blue-500 p-8 rounded-lg border-2 border-blue-800 shadow-lg h-full space-y-6">
+<!-- Column 2: Important Links Section -->
+<div class="modern-links-section p-8 rounded-3xl border-2 border-red-600 shadow-lg h-full space-y-6">
 
-    <h2 class="important-links-title text-white text-2xl font-bold">Important Links</h2>
+    <h2 class="important-links-title text-white text-2xl font-bold modern-glow-text">Important Links</h2>
     
-    <div class="important-links bg-blue-400 p-4 rounded-lg shadow-md space-y-4">
+    <div class="modern-links-container p-4 rounded-2xl shadow-md space-y-4">
         <!-- Dropdown for How to Buy -->
-        <a href="javascript:void(0);" class="link-item text-white" onclick="toggleDropdown()">How to Buy</a>
-        <div id="dropdown-content" class="hidden p-4 mt-2 bg-blue-700 rounded-lg text-white">
+        <a href="javascript:void(0);" class="modern-link-item text-white" onclick="toggleDropdown()">How to Buy</a>
+        <div id="dropdown-content" class="hidden p-4 mt-2 modern-dropdown rounded-2xl text-white">
             
             <p class="mt-2">1. Once you login, select your item and proceed to checkout.</p>
             <p>2. On the payment page, you will be prompted to copy the crypto address where you shall deposit your payment.</p>
@@ -418,14 +418,14 @@
             <p>4. Once the order has been processed, you will be required to enter the correct email address to receive your invoice and purchased orders.</p>
             <p>5. You will receive a confirmation email with further instructions.</p>
         </div>
-        <a href="#" class="link-item text-white">APPROVED BY OVER 300K BUYERS!</a>
-        <a href="#" class="link-item text-white">STAY ANONYMOUS!</a>
+        <a href="#" class="modern-link-item text-white">APPROVED BY OVER 300K BUYERS!</a>
+        <a href="#" class="modern-link-item text-white">STAY ANONYMOUS!</a>
     </div>
 
-    <div class="important-links bg-blue-600 p-4 rounded-lg shadow-md space-y-4">
+    <div class="modern-links-container p-4 rounded-2xl shadow-md space-y-4">
 
-        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="link-item text-white">Join Our Private Channel</a>
-        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="link-item text-white">Contact Admin</a>
+        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="modern-link-item text-white">Join Our Private Channel</a>
+        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="modern-link-item text-white">Contact Admin</a>
     </div>
 
 </div>
@@ -438,73 +438,151 @@
     }
 </script>
 
-<!-- CSS Styling (Embedded) -->
+<!-- Modern Theme CSS Styling -->
 <style>
-  /* Container Styles */
-  .important-links-section {
-      background-color: #1E3A8A; /* Dark blue background */
-      padding: 2rem; /* Padding for inner space */
-      border-radius: 0.75rem; /* Rounded corners */
-      border: 2px solid #1E40AF; /* Darker blue border */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the section */
-      height: 100%;
+  /* Modern Welcome Card */
+  .modern-welcome-card {
+      background: linear-gradient(135deg, #1A1A1A 0%, #262626 100%);
+      border: 2px solid rgba(220, 38, 37, 0.3);
+      box-shadow: 0 20px 25px -5px rgba(220, 38, 37, 0.1), 0 10px 10px -5px rgba(220, 38, 37, 0.04);
+      position: relative;
+      overflow: hidden;
   }
 
-  /* Title Styles */
-  .important-links-title {
-      margin-bottom: 1.5rem; /* Space below the title */
+  .modern-welcome-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
+  }
+
+  /* Modern Links Section */
+  .modern-links-section {
+      background: linear-gradient(135deg, #1A1A1A 0%, #262626 100%);
+      border: 2px solid rgba(220, 38, 37, 0.3);
+      box-shadow: 0 20px 25px -5px rgba(220, 38, 37, 0.1), 0 10px 10px -5px rgba(220, 38, 37, 0.04);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .modern-links-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
   }
 
   /* Links Container */
-  .important-links {
-      background-color: #60A5FA; /* Light blue background for link container */
-      padding: 1rem; /* Padding inside link box */
-      border-radius: 0.5rem; /* Rounded corners for link container */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Small shadow effect */
+  .modern-links-container {
+      background: rgba(220, 38, 37, 0.1);
+      border: 1px solid rgba(220, 38, 37, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
-  /* Link Styles */
-  .link-item {
+  /* Modern Link Items */
+  .modern-link-item {
       display: block;
-      padding: 0.75rem 1.5rem; /* Padding inside each link */
-      font-size: 1.125rem; /* Text size */
-      font-weight: bold; /* Bold text */
-      color: white; /* White text */
-      background-color: transparent; /* No background color on the text */
-      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-      border-radius: 0.25rem; /* Rounded links */
+      padding: 0.75rem 1.5rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: white;
+      background-color: transparent;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
   }
 
-  /* Hover Effect */
-  .link-item:hover {
-      background-color: rgba(255, 255, 255, 0.2); /* Light background hover effect */
-      color: #fff; /* Keep white text */
+  .modern-link-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: -1;
   }
 
-  /* Initially hidden */
+  .modern-link-item:hover::before {
+      left: 0;
+      opacity: 0.2;
+  }
+
+  .modern-link-item:hover {
+      color: #fff;
+      transform: translateX(8px);
+      box-shadow: 0 20px 25px -5px rgba(220, 38, 37, 0.1);
+  }
+
+  /* Modern Glow Text */
+  .modern-glow-text {
+      position: relative;
+      background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(220, 38, 37, 0.3);
+  }
+
+  /* Modern Dropdown */
+  .modern-dropdown {
+      background: linear-gradient(135deg, #DC2625 0%, #EF4444 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 25px rgba(220, 38, 37, 0.2);
+      transition: all 0.3s ease-in-out;
+  }
+
+  .modern-dropdown p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: white;
+  }
+
+  /* Hidden class */
   .hidden {
       display: none;
   }
 
-  /* Dropdown content box styling */
-  #dropdown-content {
-      background-color: #1D4ED8; /* Darker blue background */
-      padding: 1rem;
-      border-radius: 0.5rem; /* Rounded corners for dropdown content */
-      transition: all 0.3s ease-in-out; /* Smooth transition when toggling */
+  /* Modern Container */
+  .modern-container {
+      position: relative;
+      overflow: hidden;
   }
 
-  /* Title styling for instructions */
-  #dropdown-content h3 {
-      font-size: 1.125rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
+  .modern-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(220, 38, 37, 0.03) 0%, transparent 70%);
+      z-index: -2;
+      pointer-events: none;
   }
 
-  /* Text styling for instructions */
-  #dropdown-content p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
+  .modern-container::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 80%;
+      height: 80%;
+      background: var(--primary-red, #DC2625);
+      opacity: 0.02;
+      border-radius: 50%;
+      z-index: -1;
+      pointer-events: none;
   }
 </style>
 
@@ -685,11 +763,11 @@
 
     @keyframes textGlow {
         from {
-            text-shadow: 0 0 10px rgba(75, 0, 130, 0.4), 0 0 15px rgba(75, 0, 130, 0.2);
+            text-shadow: 0 0 10px rgba(220, 38, 37, 0.4), 0 0 15px rgba(220, 38, 37, 0.2);
         }
 
         to {
-            text-shadow: 0 0 20px rgba(75, 0, 130, 0.8), 0 0 30px rgba(75, 0, 130, 0.6);
+            text-shadow: 0 0 20px rgba(220, 38, 37, 0.8), 0 0 30px rgba(220, 38, 37, 0.6);
         }
     }
 
@@ -701,8 +779,8 @@
     /* Responsive container with padding, border, and background */
     .container {
         max-width: 1200px;
-        background-color: #1a202c;
-        /* Dark background */
+        background-color: #0F0F0F;
+        /* Modern dark background */
         padding: 2rem;
         /* Add padding */
         overflow: hidden;
@@ -717,15 +795,15 @@
         /* Max height for better overflow management */
         scrollbar-width: thin;
         /* For Firefox */
-        scrollbar-color: #007bff transparent;
+        scrollbar-color: #DC2625 transparent;
         /* Custom scrollbar colors for Firefox */
     }
 
     .bitlogs-card:hover {
         transform: translateY(-5px) scale(1.03);
-        background-color: #0056b3;
-        /* Slight color change on hover */
-        box-shadow: 0 20px 30px rgba(0, 123, 255, 0.3);
+        background-color: #DC2625;
+        /* Modern red theme color change on hover */
+        box-shadow: 0 20px 30px rgba(220, 38, 37, 0.3);
     }
 
     /* Smooth scrolling for content overflow */
@@ -738,13 +816,13 @@
     }
 
     .bitlogs-card::-webkit-scrollbar-thumb {
-        background-color: #007bff;
+        background-color: #DC2625;
         border-radius: 10px;
         border: 2px solid #fff;
     }
 
     .bitlogs-card::-webkit-scrollbar-thumb:hover {
-        background-color: #0056b3;
+        background-color: #EF4444;
     }
 
     /* Improved padding for readability */
