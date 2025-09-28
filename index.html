@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="home/css/modern-theme.css">
     <!-- PNotify CSS -->
 <!-- SweetAlert2 CSS -->
-<link rel="stylesheet" href="npm/sweetalert2%4011/dist/sweetalert2.min-2.css">
+<link rel="stylesheet" href="npm/sweetalert2@11/dist/sweetalert2.min-2.css">
 <script src="//code.tidio.co/f6brpsxhzzrm1htg4q5rh35sdw3r4oih.js" async=""></script>
 
 
@@ -24,7 +24,7 @@
   <!-- start: Main -->
   <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
  <!-- start: Sidebar -->
- <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transfor">
+ <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
     <a href="index-2.htm" class="flex items-center pb-4 border-b border-b-gray-800">
         <img src="originals/2f/bf/ba/2fbfbacef953f5ff48b0c3fdb7ba5fe9-2.gif" alt="" class="w-8 h-8 rounded object-cover">
         <span class="text-lg font-bold text-white ml-3">RoysCyberStore</span>
@@ -318,16 +318,36 @@
             </ul>
                         </li>
         
-        <li>
-            <a href="login.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Login
-            </a>
-        </li>
-        <li>
-            <a href="register.html" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                Register
-            </a>
-        </li>
+        <!-- Authentication Section -->
+        <div id="authSection">
+            <!-- Not logged in -->
+            <div id="notLoggedIn">
+                <li>
+                    <a href="login.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="register.html" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                        Register
+                    </a>
+                </li>
+            </div>
+            
+            <!-- Logged in -->
+            <div id="loggedIn" style="display: none;">
+                <li class="mb-2">
+                    <div class="text-white text-sm px-4 py-2">
+                        Welcome, <span id="userNameDisplay" class="text-red-400 font-semibold"></span>!
+                    </div>
+                </li>
+                <li>
+                    <button onclick="logoutUser()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full">
+                        Logout
+                    </button>
+                </li>
+            </div>
+        </div>
         
     </ul>
 </div>
@@ -358,7 +378,7 @@
             </a>
         </li>
         <li>
-            <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-green-700">
+            <button id="balanceDisplay" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-green-700">
                 $0.00
             </button>
         </li>
@@ -897,13 +917,13 @@
 <!-- TradingView Widget END -->
 </main>
 <!-- end: Main -->
-<script src="%40popperjs/core%402.11.8/dist/umd/popper.min-2.js"></script>
+<script src="@popperjs/core@2.11.8/dist/umd/popper.min-2.js"></script>
 <script src="npm/chart-2.js"></script>
 <script src="home/js-2.js"></script>
-<script src="npm/sweetalert2%4011-3"></script>
+<script src="npm/sweetalert2@11-3.js"></script>
 
 
-<script src="npm/sweetalert2%4011-3"></script>
+<script src="npm/sweetalert2@11-3.js"></script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -964,9 +984,112 @@ s0.parentNode.insertBefore(s1,s0);
 }
 </style>
 
-<script src="sidebar-fix.js"></script></body>
-</html><script src="sidebar-fix.js"></script><!-- SweetAlert2 JS -->
+<script src="sidebar-fix.js"></script>
+<script src="fix-images.js"></script>
 
+<!-- User Authentication State Management -->
+<script>
+    // Check user login state on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateUserInterface();
+        
+        // Show welcome message for new registrations
+        if (sessionStorage.getItem('showWelcomeMessage')) {
+            const currentUser = JSON.parse(sessionStorage.getItem('royscyberstore_current_user'));
+            if (currentUser) {
+                showWelcomeNotification(currentUser.name);
+            }
+            sessionStorage.removeItem('showWelcomeMessage');
+        }
+    });
+    
+    function updateUserInterface() {
+        const currentUser = JSON.parse(sessionStorage.getItem('royscyberstore_current_user') || 'null');
+        
+        if (currentUser) {
+            // User is logged in
+            document.getElementById('notLoggedIn').style.display = 'none';
+            document.getElementById('loggedIn').style.display = 'block';
+            document.getElementById('userNameDisplay').textContent = currentUser.name;
+            
+            // Update balance display
+            const balanceDisplay = document.getElementById('balanceDisplay');
+            if (balanceDisplay) {
+                balanceDisplay.textContent = `$${currentUser.balance.toFixed(2)}`;
+            }
+        } else {
+            // User is not logged in
+            document.getElementById('notLoggedIn').style.display = 'block';
+            document.getElementById('loggedIn').style.display = 'none';
+            
+            // Reset balance display
+            const balanceDisplay = document.getElementById('balanceDisplay');
+            if (balanceDisplay) {
+                balanceDisplay.textContent = '$0.00';
+            }
+        }
+    }
+    
+    function logoutUser() {
+        // Clear user session
+        sessionStorage.removeItem('royscyberstore_current_user');
+        
+        // Show logout notification
+        if (typeof Swal !== 'undefined') {
+            Swal.fire({
+                title: 'Logged Out',
+                text: 'You have been successfully logged out.',
+                icon: 'success',
+                timer: 2000,
+                showConfirmButton: false,
+                background: '#1a1a1a',
+                color: '#ffffff',
+                iconColor: '#DC2625'
+            });
+        }
+        
+        // Update UI
+        updateUserInterface();
+    }
+    
+    function showWelcomeNotification(userName) {
+        if (typeof Swal !== 'undefined') {
+            Swal.fire({
+                title: 'Welcome to RoysCyberStore!',
+                html: `<p>Registration successful!</p><p>Welcome, <strong>${userName}</strong>!</p><p>You can now browse and purchase products.</p>`,
+                icon: 'success',
+                timer: 4000,
+                showConfirmButton: true,
+                confirmButtonText: 'Start Shopping',
+                confirmButtonColor: '#DC2625',
+                background: '#1a1a1a',
+                color: '#ffffff',
+                iconColor: '#16a34a'
+            });
+        }
+    }
+    
+    // Update user balance (can be called from other pages)
+    function updateUserBalance(newBalance) {
+        const currentUser = JSON.parse(sessionStorage.getItem('royscyberstore_current_user'));
+        if (currentUser) {
+            currentUser.balance = newBalance;
+            sessionStorage.setItem('royscyberstore_current_user', JSON.stringify(currentUser));
+            
+            // Update localStorage as well
+            const users = JSON.parse(localStorage.getItem('royscyberstore_users') || '[]');
+            const userIndex = users.findIndex(user => user.id === currentUser.id);
+            if (userIndex !== -1) {
+                users[userIndex].balance = newBalance;
+                localStorage.setItem('royscyberstore_users', JSON.stringify(users));
+            }
+            
+            // Update UI
+            updateUserInterface();
+        }
+    }
+</script>
 
-
+</body>
+</html>
 

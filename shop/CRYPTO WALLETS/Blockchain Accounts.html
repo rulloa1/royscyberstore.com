@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <script src="../../3.4.5"></script>
     <link href="../../npm/remixicon%403.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../../home/css/main.css">
     <!-- PNotify CSS -->
 <!-- SweetAlert2 CSS -->
 <link rel="stylesheet" href="../../npm/sweetalert2%4011/dist/sweetalert2.min.css">
-
+<script src="../../1_259_0/static/js/render.089a862167d501cc1693.js" async=""></script>
 
 
 
@@ -26,7 +26,7 @@
  <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transfor">
     <a href="../../index.htm" class="flex items-center pb-4 border-b border-b-gray-800">
         <img src="../../originals/2f/bf/ba/2fbfbacef953f5ff48b0c3fdb7ba5fe9.gif" alt="" class="w-8 h-8 rounded object-cover">
-        <span class="text-lg font-bold text-white ml-3">RoysCyberStore</span>
+        <span class="text-lg font-bold text-white ml-3">LOGSHOP</span>
     </a>
     <ul class="mt-4 h-full overflow-y-auto">
         <li class="mb-1 group active">
@@ -318,12 +318,12 @@
                         </li>
         
         <li>
-        <a href="https://royscyberstore.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <a href="https://logshop.cc/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
     Logout
 </a>
 
-<form id="logout-form" action="https://royscyberstore.com/logout" method="POST" class="hidden">
-    <input type="hidden" name="_token" value="fKVfY6PfhlsncEUEcyB03Y3F5LJ7RLILR4osScfO"></form>
+<form id="logout-form" action="https://logshop.cc/logout" method="POST" class="hidden">
+    <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH"></form>
 
 
         </li>
@@ -335,7 +335,7 @@
 <!-- end: Sidebar -->
 
 
-<div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-[60] header-nav">
+<div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
     <button type="button" class="text-lg text-gray-600 sidebar-toggle">
         <i class="ri-menu-line"></i>
     </button>
@@ -344,7 +344,7 @@
 
 
     </ul>
-    <ul class="ml-auto flex items-center space-x-3">
+    <ul class="ml-auto flex items-center">
         <li class="">
       <!-- Add Balance Button -->
 <a href="../../show_order.html" class="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-red-700">
@@ -457,7 +457,13 @@
                                                     <li><strong>Price:</strong> $99</li>
                           <li><strong>Description:</strong> Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key</li>
                         </ul>
-                                                  <button type="button" onclick="buyProduct(`Blockchain Account`, `99`, `1,250`, `Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                                                  <form action="https://logshop.cc/add_cart/202" method="post">
+                            <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH">                            <input type="hidden" value="Blockchain Account" name="title">
+                            <input type="hidden" value="Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key" name="description">
+                            <input type="hidden" value="1,250" name="balance">
+                            <input type="hidden" value="99" name="price">
+                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                          </form>
                                               </div>
                     </div>
                   
@@ -519,7 +525,13 @@
                                                     <li><strong>Price:</strong> $175</li>
                           <li><strong>Description:</strong> Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key</li>
                         </ul>
-                                                  <button type="button" onclick="buyProduct(`Blockchain Account`, `175`, `2,500`, `Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                                                  <form action="https://logshop.cc/add_cart/203" method="post">
+                            <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH">                            <input type="hidden" value="Blockchain Account" name="title">
+                            <input type="hidden" value="Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key" name="description">
+                            <input type="hidden" value="2,500" name="balance">
+                            <input type="hidden" value="175" name="price">
+                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                          </form>
                                               </div>
                     </div>
                   
@@ -581,7 +593,13 @@
                                                     <li><strong>Price:</strong> $250</li>
                           <li><strong>Description:</strong> Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key</li>
                         </ul>
-                                                  <button type="button" onclick="buyProduct(`Blockchain Account`, `250`, `4,000`, `Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                                                  <form action="https://logshop.cc/add_cart/204" method="post">
+                            <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH">                            <input type="hidden" value="Blockchain Account" name="title">
+                            <input type="hidden" value="Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key" name="description">
+                            <input type="hidden" value="4,000" name="balance">
+                            <input type="hidden" value="250" name="price">
+                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                          </form>
                                               </div>
                     </div>
                   
@@ -643,7 +661,13 @@
                                                     <li><strong>Price:</strong> $350</li>
                           <li><strong>Description:</strong> Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key</li>
                         </ul>
-                                                  <button type="button" onclick="buyProduct(`Blockchain Account`, `350`, `5,500`, `Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                                                  <form action="https://logshop.cc/add_cart/205" method="post">
+                            <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH">                            <input type="hidden" value="Blockchain Account" name="title">
+                            <input type="hidden" value="Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key" name="description">
+                            <input type="hidden" value="5,500" name="balance">
+                            <input type="hidden" value="350" name="price">
+                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                          </form>
                                               </div>
                     </div>
                   
@@ -705,7 +729,13 @@
                                                     <li><strong>Price:</strong> $520</li>
                           <li><strong>Description:</strong> Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key</li>
                         </ul>
-                                                  <button type="button" onclick="buyProduct(`Blockchain Account`, `520`, `7,750`, `Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                                                  <form action="https://logshop.cc/add_cart/206" method="post">
+                            <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH">                            <input type="hidden" value="Blockchain Account" name="title">
+                            <input type="hidden" value="Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key" name="description">
+                            <input type="hidden" value="7,750" name="balance">
+                            <input type="hidden" value="520" name="price">
+                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                          </form>
                                               </div>
                     </div>
                   
@@ -767,7 +797,13 @@
                                                     <li><strong>Price:</strong> $750</li>
                           <li><strong>Description:</strong> Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key</li>
                         </ul>
-                                                  <button type="button" onclick="buyProduct(`Blockchain Account`, `750`, `10,000`, `Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key`)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                                                  <form action="https://logshop.cc/add_cart/207" method="post">
+                            <input type="hidden" name="_token" value="1fgoSNjiREhaVCsnoKYYfiLinatbYCfdgz1CK0mH">                            <input type="hidden" value="Blockchain Account" name="title">
+                            <input type="hidden" value="Wallet ID, Password, 2 FA, Email verification (holder&#039;s email &amp; password for verification), Recovery phrase (Backup), Private Key" name="description">
+                            <input type="hidden" value="10,000" name="balance">
+                            <input type="hidden" value="750" name="price">
+                            <button type="submit">BUY <i class="fas fa-cart-arrow-down"></i></button>
+                          </form>
                                               </div>
                     </div>
                   
@@ -874,67 +910,25 @@
 <!-- TradingView Widget END -->
 </main>
 <!-- end: Main -->
+<script src="../../%40popperjs/core%402.11.8/dist/umd/popper.min.js"></script>
+<script src="../../npm/chart.js"></script>
+<script src="../../home/js.js"></script>
+<script src="../../npm/sweetalert2%4011-1"></script>
 
 
-
-
-
-
-
-
-
-
-<!-- Additional CSS to ensure header visibility -->
-<style>
-/* Ensure the top header bar is always visible */
-.header-nav {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 999 !important;
-    background: white !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-}
-
-/* Ensure buttons in header are visible */
-.header-nav ul li a,
-.header-nav ul li button {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    line-height: 1.4 !important;
-    text-align: center !important;
-}
-
-/* Make sure all button text is visible with maximum contrast */
-.header-nav ul.ml-auto li * {
-    color: white !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: inline !important;
-}
-
-/* Ensure button backgrounds are proper */
-.header-nav a[href*="show_order"] {
-    background-color: #dc2626 !important;
-}
-.header-nav a[href*="orders"] {
-    background-color: #2563eb !important;
-}
-.header-nav button {
-    background-color: #16a34a !important;
-}
-</style>
+<script src="../../npm/sweetalert2%4011-1"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6704f0ddcec6d0125df31692/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
-</html><script src="../../buy-button-script.js"></script><script src="../../sidebar-fix.js"></script><!-- SweetAlert2 JS -->
-
-
-
-
-
-
-
-
+</html><!-- SweetAlert2 JS -->
