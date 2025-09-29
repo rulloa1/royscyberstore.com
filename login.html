@@ -135,16 +135,17 @@
 <body>
 
     <!-- Login form -->
-    <form method="POST" class="box" action="https://royscyberstore.com/login">
-        <input type="hidden" name="_token" value="oyPF7YJtzmYxOhMj3WVBrTp1JP5t9NXJboSKlaZT">
+    <form class="box" onsubmit="handleLogin(event)">
         <div class="logo-container">
             <!-- Logo placeholder -->
         </div>
         <h2 style="text-align: center; color: #fff;">RoysCyberStore</h2>
 
-        <!-- Display Validation Errors -->
+        <!-- Error message display -->
+        <div id="errorMessage" class="error-message" style="display: none; color: #ff6b6b; text-align: center; margin-bottom: 15px; background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 5px;"></div>
         
-        <!-- Session Status -->
+        <!-- Success message display -->
+        <div id="successMessage" class="success-message" style="display: none; color: #4ade80; text-align: center; margin-bottom: 15px; background: rgba(74, 222, 128, 0.1); padding: 10px; border-radius: 5px;"></div>
         
         <!-- Form Fields -->
         <div class="form-info">
@@ -152,10 +153,103 @@
 
             <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm input" id="password" type="password" placeholder="**********" name="password" required="required" autocomplete="current-password">
 
-            <input type="submit" name="login" value="Login">
+            <input type="submit" id="loginButton" name="login" value="Login">
             <p><a class="text-light" href="register.html">Account Registration?</a></p>
         </div>
     </form>
+
+
+    <script>
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            // Clear previous messages
+            hideMessages();
+            
+            // Basic validation
+            if (!email || !password) {
+                showError('Please fill in all fields');
+                return;
+            }
+            
+            // Get stored users
+            const users = JSON.parse(localStorage.getItem('royscyberstore_users') || '[]');
+            
+            // Find user by email
+            const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+            
+            if (!user) {
+                showError('Account not found. Please register first.');
+                return;
+            }
+            
+            // Verify password (simple hash comparison)
+            const hashedPassword = hashPassword(password);
+            if (user.password !== hashedPassword) {
+                showError('Invalid email or password.');
+                return;
+            }
+            
+            // Login successful
+            showSuccess('Login successful! Redirecting...');
+            
+            // Set current user session
+            sessionStorage.setItem('royscyberstore_current_user', JSON.stringify({
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                balance: user.balance
+            }));
+            
+            // Disable form and redirect after 1.5 seconds
+            document.getElementById('loginButton').disabled = true;
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+        
+        function showSuccess(message) {
+            const successDiv = document.getElementById('successMessage');
+            successDiv.textContent = message;
+            successDiv.style.display = 'block';
+        }
+        
+        function hideMessages() {
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'none';
+        }
+        
+        // Simple password hashing (same as registration)
+        function hashPassword(password) {
+            let hash = 0;
+            for (let i = 0; i < password.length; i++) {
+                const char = password.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Convert to 32bit integer
+            }
+            return hash.toString();
+        }
+        
+        // Check if user is already logged in
+        window.addEventListener('DOMContentLoaded', function() {
+            const currentUser = sessionStorage.getItem('royscyberstore_current_user');
+            if (currentUser) {
+                // User already logged in, redirect to homepage
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
 
 </body>
 </html>
