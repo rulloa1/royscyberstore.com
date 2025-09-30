@@ -9,7 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "next": "^22.0.0", //Ensure this line exists
+        "next": "^22.0.0", //Ensure this line exists//
         "react": "^18",
         "react-dom": "^18"
     }
