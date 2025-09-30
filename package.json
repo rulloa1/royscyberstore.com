@@ -1,0 +1,21 @@
+{
+"name": "your-app-name",
+"version":
+"O. 1.0",
+"private": true,
+"scripts":
+{
+"dev": "next dev"
+"build":
+"next buila",
+"start":
+"next start"
+"lint": "next lint"
+"dependencies": 1
+"next":
+"^14.0.0", |/ Ensure this line exists
+"react": "^18"
+"react-dom": "'^ 18"
+and is correct
+}
+}
