@@ -1,5 +1,5 @@
 {
-    "name": "www-logshop-cc",
+    "name": "royscyberstore.com",
     "version": "O.1.0",
     "private": true,
     "scripts": {
@@ -9,7 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "next": "^14.0.0", //Ensure this line exists
+        "next": "^22.0.0", //Ensure this line exists
         "react": "^18",
         "react-dom": "^18"
     }
