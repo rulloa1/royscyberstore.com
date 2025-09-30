@@ -1,16 +1,12 @@
 {
     "name": "royscyberstore.com",
-    "version": "O.1.0",
+    "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
+        "dev": "echo 'Start XAMPP Apache server and navigate to http://localhost/royscyberstore.com/'",
+        "build": "echo 'This is a static HTML site. No build step required.'",
+        "start": "echo 'Start XAMPP Apache server and navigate to http://localhost/royscyberstore.com/'",
+        "lint": "echo 'No linting configured for this static HTML site.'"
     },
-    "dependencies": {
-        "next": "^22.0.0",
-        "react": "^18",
-        "react-dom": "^18"
-    }
+    "dependencies": {}
 }
