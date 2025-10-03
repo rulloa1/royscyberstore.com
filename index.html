@@ -31,10 +31,19 @@
     </a>
     <ul class="mt-4 h-full overflow-y-auto">
         <li class="mb-1 group active">
-            <a href="index.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
-                <i class="ri-home-2-line mr-3 text-lg"></i>
-                <span class="text-sm">Dashboard</span>
+            <a href="login.html" id="loginButton" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                <i class="ri-login-box-line mr-3 text-lg"></i>
+                <span class="text-sm">Login</span>
             </a>
+            <a href="register.html" id="registerLink" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                <i class="ri-user-add-line mr-3 text-lg"></i>
+                <span class="text-sm">Register</span>
+            </a>
+            <a href="#" id="logoutButton" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100" style="display: none;">
+                <i class="ri-logout-box-line mr-3 text-lg"></i>
+                <span class="text-sm">Logout</span>
+            </a>
+            <div id="userEmailDisplay" class="text-gray-300 text-sm mt-2 px-4" style="display: none;"></div>
         </li>
                 <li class="mb-1 group">
             <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
@@ -1089,6 +1098,8 @@ s0.parentNode.insertBefore(s1,s0);
     }
 </script>
 
+<script src="sidebar-fix.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
 

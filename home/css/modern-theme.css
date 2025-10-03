@@ -390,3 +390,14 @@ body::after {
     transform: rotate(45deg);
     opacity: 0.1;
 }
+
+
+/* Dropdown Menu Fix */
+.group.selected ul {
+    display: block !important;
+}
+
+.group ul {
+    display: none;
+}
+
