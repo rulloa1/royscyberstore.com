@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-RoysCyberStore is a front-end e-commerce website built with vanilla HTML, CSS (TailwindCSS), and JavaScript. It runs locally using XAMPP as a development environment and serves static product catalog pages for various financial products.
+RoysCompany is a front-end e-commerce website built with vanilla HTML, CSS (TailwindCSS), and JavaScript. It runs locally using XAMPP as a development environment and serves static product catalog pages for various financial products.
 
 ## Technology Stack
 
@@ -25,7 +25,7 @@ RoysCyberStore is a front-end e-commerce website built with vanilla HTML, CSS (T
 
 ### Directory Structure
 ```
-royscyberstore.com/
+royscompany.com/
 ├── index.html                 # Main dashboard/homepage
 ├── login.html                # Authentication pages
 ├── register.html
@@ -73,7 +73,7 @@ royscyberstore.com/
 ```bash
 # Start XAMPP Apache server
 # Navigate to XAMPP Control Panel and start Apache
-# Access the site at http://localhost/royscyberstore.com/
+# Access the site at http://localhost/royscompany.com/
 ```
 
 ### Working with Product Pages
@@ -173,7 +173,7 @@ cd "shop/[CATEGORY_NAME]/"
 This project requires XAMPP or similar local server environment:
 
 1. **XAMPP Setup**: Place project in `xampp/htdocs/` directory
-2. **Access URL**: `http://localhost/royscyberstore.com/`
+2. **Access URL**: `http://localhost/royscompany.com/`
 3. **File Changes**: Refresh browser to see changes (no build process required)
 4. **Testing**: Test across desktop and mobile viewport sizes
 

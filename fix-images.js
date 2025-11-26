@@ -1,4 +1,4 @@
-// Image Fix Script for RoysCyberStore
+// Image Fix Script for RoysCompany
 // This script fixes broken image references by replacing them with available images
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const textLogo = document.createElement('div');
                 textLogo.className = 'text-logo w-8 h-8 rounded bg-red-600 flex items-center justify-center text-white font-bold text-xs';
                 textLogo.textContent = 'RC';
-                textLogo.title = 'RoysCyberStore';
+                textLogo.title = 'RoysCompany';
                 logoContainer.insertBefore(textLogo, logoImage);
             }
         };

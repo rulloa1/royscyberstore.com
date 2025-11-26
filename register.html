@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | RoysCyberStore</title>
+    <title>Register | RoysCompany</title>
     <!-- Base URL for assets -->
     <!-- Removed by WebCopy --><!--<base href="/public">--><!-- Removed by WebCopy -->
 
@@ -257,7 +257,7 @@
         <div class="logo-container">
             <!-- Placeholder for logo -->
         </div>
-        <h3>RoysCyberStore REGISTRATION PAGE</h3>
+        <h3>RoysCompany REGISTRATION PAGE</h3>
         <div class="form-info">
             <!-- Laravel session status and validation errors -->
             
@@ -285,7 +285,7 @@
                 
                 <!-- Success message -->
                 <div id="successMessage" class="success-message" style="display: none;">
-                    <p>Registration successful! Redirecting to RoysCyberStore...</p>
+                    <p>Registration successful! Redirecting to RoysCompany...</p>
                 </div>
 
                 <!-- Login link -->
@@ -387,7 +387,7 @@
         
         function isUserExists(email) {
             // Check localStorage for existing users (simulate database check)
-            const users = JSON.parse(localStorage.getItem('royscyberstore_users') || '[]');
+            const users = JSON.parse(localStorage.getItem('royscompany_users') || '[]');
             return users.some(user => user.email.toLowerCase() === email.toLowerCase());
         }
         
@@ -401,7 +401,7 @@
             // Simulate API call delay
             setTimeout(() => {
                 // Store user data locally
-                const users = JSON.parse(localStorage.getItem('royscyberstore_users') || '[]');
+                const users = JSON.parse(localStorage.getItem('royscompany_users') || '[]');
                 const newUser = {
                     id: Date.now(),
                     name: name,
@@ -412,10 +412,10 @@
                 };
                 
                 users.push(newUser);
-                localStorage.setItem('royscyberstore_users', JSON.stringify(users));
+                localStorage.setItem('royscompany_users', JSON.stringify(users));
                 
                 // Set current user session
-                sessionStorage.setItem('royscyberstore_current_user', JSON.stringify({
+                sessionStorage.setItem('royscompany_current_user', JSON.stringify({
                     id: newUser.id,
                     name: newUser.name,
                     email: newUser.email,

@@ -1,4 +1,4 @@
-# Performance Analysis Report - RoysCyberStore.com
+# Performance Analysis Report - RoysCompany.com
 
 **Date:** November 26, 2025
 **Analyzed By:** Claude
@@ -432,7 +432,7 @@ While analyzing performance, noted these security items:
 
 ## Conclusion
 
-The RoysCyberStore website has significant performance optimization opportunities. The most critical issue is the **10.7MB of duplicate resources** and **2.8MB unpurged Tailwind CSS**.
+The RoysCompany website has significant performance optimization opportunities. The most critical issue is the **10.7MB of duplicate resources** and **2.8MB unpurged Tailwind CSS**.
 
 By implementing the **Phase 1 Quick Wins** (2 hours), you can achieve **40% faster load times immediately**. Full implementation of all phases will result in:
 

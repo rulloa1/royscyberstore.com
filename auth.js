@@ -2,7 +2,7 @@
 
 // Function to get the current user from session storage
 function getCurrentUser() {
-    const user = sessionStorage.getItem('royscyberstore_current_user');
+    const user = sessionStorage.getItem('royscompany_current_user');
     return user ? JSON.parse(user) : null;
 }
 
@@ -32,7 +32,7 @@ function updateAuthUI() {
 // Function to handle logout
 function handleLogout(event) {
     event.preventDefault();
-    sessionStorage.removeItem('royscyberstore_current_user');
+    sessionStorage.removeItem('royscompany_current_user');
     // Optionally, show a logout success message
     // alert('You have been logged out.');
     window.location.href = 'index.html'; // Redirect to homepage after logout

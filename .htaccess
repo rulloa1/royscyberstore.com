@@ -1,10 +1,10 @@
-# RoysCyberStore - Main website configuration
+# RoysCompany - Main website configuration
 RewriteEngine On
 
-# Redirect old domain references to royscyberstore.com (if needed)
+# Redirect old domain references to royscompany.com (if needed)
 # RewriteCond %{HTTP_HOST} ^old-domain\.com$ [OR]
 # RewriteCond %{HTTP_HOST} ^www\.old-domain\.com$
-# RewriteRule ^(.*)$ https://royscyberstore.com/$1 [R=301,L]
+# RewriteRule ^(.*)$ https://royscompany.com/$1 [R=301,L]
 
 # Security headers (optional)
 Header always set X-Content-Type-Options nosniff

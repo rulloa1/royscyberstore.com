@@ -26,7 +26,7 @@
  <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
     <a href="index.html" class="flex items-center pb-4 border-b border-b-gray-800">
         <img src="originals/2f/bf/ba/2fbfbacef953f5ff48b0c3fdb7ba5fe9.gif" alt="" class="w-8 h-8 rounded object-cover">
-        <span class="text-lg font-bold text-white ml-3">RoysCyberStore</span>
+        <span class="text-lg font-bold text-white ml-3">RoysCompany</span>
     </a>
     <ul class="mt-4 h-full overflow-y-auto">
         <li class="mb-1 group active">
@@ -407,16 +407,16 @@
         <!-- Column 1: Welcome Section -->
         <div class="modern-welcome-card p-8 rounded-3xl border-2 border-red-600 shadow-lg transform hover:scale-105 transition-all duration-700 animate-fade-in h-full overflow-auto">
             <h2 class="text-4xl font-extrabold text-white mb-6 text-center modern-glow-text">
-                Welcome to RoysCyberStore</h2>
+                Welcome to RoysCompany</h2>
             <p class="text-lg text-gray-200 leading-relaxed mb-4 shadow-text">
-                Discover <span class="text-red-400 underline decoration-2 font-bold">RoysCyberStore</span>, where your monetary
-                equilibrium meets identity. At RoysCyberStore, we craft a legacy of trust,
+                Discover <span class="text-red-400 underline decoration-2 font-bold">RoysCompany</span>, where your monetary
+                equilibrium meets identity. At RoysCompany, we craft a legacy of trust,
                 unparalleled security where legitimacy reigns supreme. We ensure daily, exhaustive counterchecks of our
                 products to affirm authenticity,
                 leaving no room for compromise.
             </p>
             <p class="text-lg text-gray-200 leading-relaxed shadow-text mb-6">
-            Have unlimited experience shopping with us at https://royscyberstore.com
+            Have unlimited experience shopping with us at https://royscompany.com
             </p>
 
             <h2 class="text-3xl font-extrabold text-white mb-6 text-center modern-glow-text">
@@ -452,8 +452,8 @@
 
     <div class="modern-links-container p-4 rounded-2xl shadow-md space-y-4">
 
-        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="modern-link-item text-white">Join Our Private Channel</a>
-        <a href="https://t.me/RoysCyberStore_Admin" target="_blank" class="modern-link-item text-white">Contact Admin</a>
+        <a href="https://t.me/RoysCompany_Admin" target="_blank" class="modern-link-item text-white">Join Our Private Channel</a>
+        <a href="https://t.me/RoysCompany_Admin" target="_blank" class="modern-link-item text-white">Contact Admin</a>
     </div>
 
 </div>
@@ -999,7 +999,7 @@ s0.parentNode.insertBefore(s1,s0);
         
         // Show welcome message for new registrations
         if (sessionStorage.getItem('showWelcomeMessage')) {
-            const currentUser = JSON.parse(sessionStorage.getItem('royscyberstore_current_user'));
+            const currentUser = JSON.parse(sessionStorage.getItem('royscompany_current_user'));
             if (currentUser) {
                 showWelcomeNotification(currentUser.name);
             }
@@ -1008,7 +1008,7 @@ s0.parentNode.insertBefore(s1,s0);
     });
     
     function updateUserInterface() {
-        const currentUser = JSON.parse(sessionStorage.getItem('royscyberstore_current_user') || 'null');
+        const currentUser = JSON.parse(sessionStorage.getItem('royscompany_current_user') || 'null');
         
         if (currentUser) {
             // User is logged in
@@ -1036,7 +1036,7 @@ s0.parentNode.insertBefore(s1,s0);
     
     function logoutUser() {
         // Clear user session
-        sessionStorage.removeItem('royscyberstore_current_user');
+        sessionStorage.removeItem('royscompany_current_user');
         
         // Show logout notification
         if (typeof Swal !== 'undefined') {
@@ -1059,7 +1059,7 @@ s0.parentNode.insertBefore(s1,s0);
     function showWelcomeNotification(userName) {
         if (typeof Swal !== 'undefined') {
             Swal.fire({
-                title: 'Welcome to RoysCyberStore!',
+                title: 'Welcome to RoysCompany!',
                 html: `<p>Registration successful!</p><p>Welcome, <strong>${userName}</strong>!</p><p>You can now browse and purchase products.</p>`,
                 icon: 'success',
                 timer: 4000,
@@ -1075,17 +1075,17 @@ s0.parentNode.insertBefore(s1,s0);
     
     // Update user balance (can be called from other pages)
     function updateUserBalance(newBalance) {
-        const currentUser = JSON.parse(sessionStorage.getItem('royscyberstore_current_user'));
+        const currentUser = JSON.parse(sessionStorage.getItem('royscompany_current_user'));
         if (currentUser) {
             currentUser.balance = newBalance;
-            sessionStorage.setItem('royscyberstore_current_user', JSON.stringify(currentUser));
+            sessionStorage.setItem('royscompany_current_user', JSON.stringify(currentUser));
             
             // Update localStorage as well
-            const users = JSON.parse(localStorage.getItem('royscyberstore_users') || '[]');
+            const users = JSON.parse(localStorage.getItem('royscompany_users') || '[]');
             const userIndex = users.findIndex(user => user.id === currentUser.id);
             if (userIndex !== -1) {
                 users[userIndex].balance = newBalance;
-                localStorage.setItem('royscyberstore_users', JSON.stringify(users));
+                localStorage.setItem('royscompany_users', JSON.stringify(users));
             }
             
             // Update UI

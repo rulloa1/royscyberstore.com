@@ -1,5 +1,5 @@
 # Performance Optimization Summary
-## RoysCyberStore.com - Phase 1 Quick Wins
+## RoysCompany.com - Phase 1 Quick Wins
 
 **Date Completed:** November 26, 2025
 **Branch:** claude/analyze-performance-0147vEB7LUFdM3PPtC2Jro1f

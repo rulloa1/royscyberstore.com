@@ -1,11 +1,11 @@
 {
-    "name": "royscyberstore.com",
+    "name": "royscompany.com",
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "echo 'Start XAMPP Apache server and navigate to http://localhost/royscyberstore.com/'",
+        "dev": "echo 'Start XAMPP Apache server and navigate to http://localhost/royscompany.com/'",
         "build": "echo 'This is a static HTML site. No build step required.'",
-        "start": "echo 'Start XAMPP Apache server and navigate to http://localhost/royscyberstore.com/'",
+        "start": "echo 'Start XAMPP Apache server and navigate to http://localhost/royscompany.com/'",
         "lint": "echo 'No linting configured for this static HTML site.'"
     },
     "dependencies": {}

@@ -139,7 +139,7 @@
         <div class="logo-container">
             <!-- Logo placeholder -->
         </div>
-        <h2 style="text-align: center; color: #fff;">RoysCyberStore</h2>
+        <h2 style="text-align: center; color: #fff;">RoysCompany</h2>
 
         <!-- Error message display -->
         <div id="errorMessage" class="error-message" style="display: none; color: #ff6b6b; text-align: center; margin-bottom: 15px; background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 5px;"></div>
@@ -178,7 +178,7 @@
             }
             
             // Get stored users
-            const users = JSON.parse(localStorage.getItem('royscyberstore_users') || '[]');
+            const users = JSON.parse(localStorage.getItem('royscompany_users') || '[]');
             
             // Find user by email
             const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
@@ -199,7 +199,7 @@
             showSuccess('Login successful! Redirecting...');
             
             // Set current user session
-            sessionStorage.setItem('royscyberstore_current_user', JSON.stringify({
+            sessionStorage.setItem('royscompany_current_user', JSON.stringify({
                 id: user.id,
                 name: user.name,
                 email: user.email,
@@ -243,7 +243,7 @@
         
         // Check if user is already logged in
         window.addEventListener('DOMContentLoaded', function() {
-            const currentUser = sessionStorage.getItem('royscyberstore_current_user');
+            const currentUser = sessionStorage.getItem('royscompany_current_user');
             if (currentUser) {
                 // User already logged in, redirect to homepage
                 window.location.href = 'index.html';
